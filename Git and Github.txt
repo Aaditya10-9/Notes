@@ -1,0 +1,79 @@
+What is Git?
+Free and open source version Control system.
+
+What is version control?
+The management of changes to documents, computer programs, large web sites, and other Collections of information.
+
+What is GitHub?
+Website that allows developers to store and manage their code using Git.
+
+
+Commands for Configuring Git:
+
+git config --global user.name "#Username" -> To create a user
+git config --global user.email "#email used while creating GitHub account"
+git config --list -> To check what is installed while configuring git.
+
+
+Git Commands:
+
+Clone-> Bring repository that is hosted somewhere like GitHub into a folder on your local Machine.
+        -> git clone <link of repository>
+
+Status-> Displays the state of the code.
+         Types of status:
+          1. Untacked-new files that git doesn't yet track
+          2. modified-changed
+          3. staged- file is ready to be committed
+          4. unmodified- unchanged
+         -> git status
+
+Add-> Track your files and changes in Git, adds new or changed files in your working directory to the git staging area.
+      -> git add <file name>
+      -> git add . //to add many changes together.
+
+Commit->Save your files in git
+        -> git commit -m "Some message"
+
+Push->Upload Git commits from local repository to a remote repository, like GitHub.
+      -> git push origin main -->we can also add "-u" after push to specify that we will be pushing changes to this branch only and will only be writing "git push" now for pushing changes.
+
+
+Init-> Used to create a new git repository from local machine.
+       ->git init
+       -> git remote add origin <repo link> -->This is used to connect ne local repo to the remote repo created on GitHub.
+       -> git remote -v -->It is used to check the address of the remote repository.
+
+Branch Commands:
+
+git branch -->To check branch.
+git branch -M <new name/main> -->To rename branch.
+git checkout <branch name> -->To navigate.
+git checkout -b <New branch name> -->To create new branch.
+git branch -d <branch name> -->To delete branch.
+
+Merge Code:
+git diff <branch name> -->TO compare commits, branches, files and more.
+git merge <branch name> -->To merge 2 branches.
+or
+Create a PR 
+Pull Request-->It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+
+Resolving Merge conflicts: An event that takes place when git is unable to automatically resolve differences in code between two commits.
+
+Pull->Download changes from remote repo to your local machine, the opposite of push.
+      -> git pull origin main
+
+Undoing changes:
+Case1-> Stages Changes
+        ->git reset <file name>
+        ->git reset
+Case2-> Committed Changes (for one commit)
+        ->git reset HEAD~1
+Case3-> Committed changes (for many commits)
+        ->git reset <commit hash>
+        ->git reset --hard <commit hash>
+
+To check history of all changes made in Git--> git log
+
+Fork--> A fork is a new repository that shares code and visibility settings with the original "upstream" repository. Fork is a rough Copy.
